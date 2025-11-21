@@ -4,15 +4,25 @@ layout: default
 ---
 
 <div class="home-body">
-    <aside class="left-aside">
-        <p>This is the left aside!</p>
+    <aside class="aside left-aside">
+        {%include aside-nav.html %}
+        {%include aside-updates.html %}
     </aside>
     <main>
-        <p>Welcome to Chrysopoeia :). Have a seat.</p>
+        <p><i><span class="link"><a href="https://en.wikipedia.org/wiki/Francis_Fukuyama" target="_blank">Francis Fuck-ur-mama</span></a> was right! History is over and we've all collectively arrived at our final destination, hell. But we still get to make websites and stuff.</i></p>
+        <p>Yo! You found my personal site! In the event that this is the first “small web” blog you’ve ever come across, here’s the idea:</p>
+        <ul>
+            <li>fuck AI</li>
+            <li>Social media, while indispensible in some form for the purpose of mass organizing (especially in the face of fascism), is unfortunately infected with ligma.</li>
+            <li>The centralized, corporatized, data-harvesting modern Web 2.0/3.0 internet landscape was a mistake that has resulted in dystopian outcomes, the worst of which we’ve only began to glimpse (for instance, the Shmepartment of Shmomeland Shmecurity is using harvested social media data in conjunction with AI to bolster the already thorough Shmershmailence Shtate, to say nothing of fucking <i>military AI drones</i>) and we must all rebuild the vines and trees of days gone by.</li>
+            <li>It’s fun to blog :)</li>
+        </ul>
+
+        <p>I like to make music (sometimes classical instrumentation, sometimes guitar stuff, sometimes electronic stuff, etc.), read,  write (like right now! :o), mess around with stationery and journals, and try out lots of new hobbies. I’m starting this blog to be a hub for all of those things and hopefully, to engage with them a little more thoughtfully.</p>
+
+        <p>I aim to post some kind of writing at least once a week. I pray that I stick to it ;-; I’d love for you to check out some of the stuff that I put out!</p>
     </main>
-    <aside class="right-aside">
-        <div class="status-cafe-ctr">
-            <p>gonna put a status cafe here</p>
-        </div>
+    <aside class="aside right-aside">
+        {% include aside-tweets.html %}
     </aside>
 </div>

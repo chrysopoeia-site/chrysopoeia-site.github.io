@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{page.title}}</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <div class="root-ctr">
+            {% include header.html %}
+            <div class="posts-ctr">
+                {% for post in site.categories.tweets %}
+                <div class="tweet">
+                    <p>{{post.date | date: "%Y-%m-%d"}}</p>
+                    <p>{{post.content}}</p>
+                </div>
+                <!-- <div class="post-card"> -->
+                <!--     <a href="{{post.url}}.html" class="link-box"> -->
+                <!--         <h2 class="post-title cat-{{post.category}}">{{post.title}}</h2> -->
+                <!--         <div class="post-preview fade">{{post.content}}</div> -->
+                <!--     </a> -->
+                <!-- </div> -->
+                {% endfor %}
+            </div>
+            {% include footer.html %}
+        </div>
+    </body>
+</html>

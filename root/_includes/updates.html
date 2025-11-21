@@ -1,0 +1,8 @@
+<div class="updates-ctr">
+    {% for post in site.categories.updates %}
+    <div class="update">
+        <p class="update-date">{{post.date | date: "%Y-%m-%d"}}</p>
+        <p class="update-content">{{post.content}}</p>
+    </div>
+    {% endfor %}
+</div>

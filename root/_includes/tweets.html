@@ -1,0 +1,8 @@
+<div class="tweets-ctr">
+    {% for post in site.categories.tweets %}
+    <div class="tweet">
+        <p class="tweet-date">{{post.date | date: "%Y-%m-%d"}}</p>
+        <div class="tweet-content">{{post.content}}</div>
+    </div>
+    {% endfor %}
+</div>
