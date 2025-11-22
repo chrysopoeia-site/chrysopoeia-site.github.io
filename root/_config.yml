@@ -1,0 +1,7 @@
+collections:
+  blog:
+    output: true
+    permalink: /:categories/:month/:day/:title/
+  writing:
+    output: true
+    permalink: /:categories/:title/

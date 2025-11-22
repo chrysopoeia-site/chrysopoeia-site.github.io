@@ -1,9 +1,15 @@
 @font-face {
     font-family: "MX";
-    src: url("../fonts/mx437/Mx437_IBM_PS-55_re.ttf") format("truetype");
+    src: url("../fonts/Mx437_IBM_PS-55_re.woff");
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Ichigaya Mincho";
+    src: url("../fonts/Ichigayamincho-9MAv0.ttf");
+    /* src: url("../fonts/Mx437_IBM_PS-55_re.ttf"); */
+    font-style: normal;
+}
 
 @keyframes skew-x-shaking {
     0% { transform: skewX(-15deg); }
@@ -38,7 +44,9 @@
     --off-white: #ede8dc;
     --green: #4d5c1c;
 
-    --base-font-size: 13px;
+    --base-font-size: 22px;
+    --body-text-area-padding: 30px;
+    /* --base-font-size: 1em; */
     --panel-padding: 10px;
 }
 
@@ -47,6 +55,7 @@
     padding: 0px;
     margin: 0px;
     color: white;
+    /* font-family: "MX", monospace; */
     font-family: "MX", monospace;
 }
 body::before {
@@ -58,33 +67,47 @@ body::before {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(12, 5, 15, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    background: linear-gradient(rgba(12, 5, 15, 0) 50%, rgba(0, 0, 0, 0.18) 50%);
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
     z-index: 200;
 }
 body {
-    /* background-image: url("../imgs/black_paper_texture.png"); */
     background-color: var(--bg-green);
-    /* font-size: 0.80em; */
     font-size: var(--base-font-size);
-    /* .link { */
-    /*     display: inline-block; */
-    /*     height: 1.8em; */
-    /*     position: absolute; */
-/* } */
+}
+h1 {
+    color: var(--off-white);
+}
+audio {
+    max-width: 200px;
+}
+.music-controls {
+    display: flex;
+    justify-content: space-between;
+    * {
+        cursor: pointer;
+    }
+}
+.currently-playing {
+    margin-top: 15px;
+}
+.inline-img {
+    display: inline-block;
+    margin: 0px 3px 0px 3px;
+    height: var(--base-font-size);
 }
 a, a:visited {
-    background-color: ;
-    /* background: linear-gradient(to top,  50%, transparent 50%); */
     background: linear-gradient(to top, var(--red) 50%, transparent 50%);
     display: inline-block;
-    height: 1.3em;
+    height: 1em;
     color: var(--yellow);
     text-decoration: none;
     font-weight: bold;
-    /* text-decoration:  */
+}
+p, li {
+    line-height: 1;
 }
 a:hover {
     animation: skew-x-shaking 0.8s infinite;
@@ -99,6 +122,7 @@ ul {
 }
 legend {
     margin-left: 10px;
+    /* font-family: "Ichigaya Mincho", serif; */
     font-size: 1.2em;
     color: var(--yellow);
     font-weight: bold;
@@ -115,15 +139,31 @@ fieldset {
     display: inline-block;
     background-color: transparent;
     align-self: center;
-    background: linear-gradient(to top, var(--off-white) 50%, transparent 50%);
     &:hover {
         animation: none;
     }
-    img {
-        height: 70px;
-        width: 400px;
+    .logo-ctr {
+        display: flex;
+        align-items: center;
+        >* {font-size: 2.3em;}
+        .moon, .stars {display: none;}
+        .moon {font-size: 1.3em;}
         &:hover {
-            animation: subtle-skew-x-shaking 0.2s infinite;
+            h1 {
+                animation: subtle-skew-x-shaking 0.2s infinite;
+                background: linear-gradient(to top, var(--off-white) 0%, transparent 40%);
+            }
+            .moon {
+                display: block;
+                color: var(--red);
+                animation: skew-x-shaking 0.9s infinite;
+            }
+            .stars {
+                display: block;
+                color: var(--yellow);
+                animation: subtle-skew-x-shaking 0.5s infinite;
+            }
+            .logo-lines {color: var(--dark-green); }
         }
     }
 }
@@ -131,7 +171,8 @@ fieldset {
 header {
     border: 5px double #313c0f;
     background-color: var(--green);
-    box-shadow: 10px 10px var(--off-white);
+    /* box-shadow: 10px 10px var(--off-white); */
+    box-shadow: 10px 10px 2px var(--off-white);
     margin: 15px 5px 15px 5px;
     height: 140px;
     display: flex;
@@ -181,15 +222,14 @@ header {
 .shelves-body,
 .blog-body,
 .writing-body {
+    p, li {
+        text-align: justify;
+    }
     margin: 5px;
     display: flex;
     flex-direction: row;
     min-height: 300px;
     width: auto;
-}
-.blog-body > main {
-    flex: 1 1 80%;
-    min-width: 500px;
 }
 .aside {
     width: 250px;
@@ -197,16 +237,14 @@ header {
         margin: 5px 15px 5px 0px;
     }
     &.right-aside {
-        .aside-item {
-            margin-bottom: 15px;
-        }
         margin: 5px 0px 5px 15px;
     }
     .aside-item {
+        border: 5px double #313c0f;
         margin-bottom: 20px;
         background-color: var(--dark-green);
         padding: 5px;
-        box-shadow: 10px 10px var(--off-white);
+        box-shadow: 10px 10px 2px var(--off-white);
         &:hover {background-color: var(--green);}
     }
 }
@@ -220,9 +258,10 @@ header {
 }
 
 main {
-    box-shadow: 10px 10px var(--off-white);
+    /* box-shadow: 10px 10px var(--off-white); */
+    box-shadow: 10px 10px 2px var(--off-white);
     border: 5px double #313c0f;
-    padding: 20px;
+    padding: var(--body-text-area-padding);
     flex: 1 1 50%;
     margin: 5px 15px 5px 15px;
     background-color: var(--green);
@@ -245,11 +284,38 @@ footer {
     height: 100px;
 }
 
-.blog-main {
-    box-shadow: 10px 10px var(--off-white);
-    padding: 10px;
-    flex: 1 1 100%;
-    margin: 5px 15px 5px 15px;
+/*
+ * BLOG PAGE SHIT
+ * */
+
+main h1 {
+    margin-bottom: 15px;
+}
+main h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: var(--off-white);
+}
+.blog-main, .writing-main {
+    /* flex: 1 1 100%; */
+    /* margin: 5px 15px 5px 15px; */
     background-color: var(--green);
     >* {margin-bottom: 15px;}
+    ul {
+        margin-left: 0px;
+        list-style-type: none;
+        display: block;
+        .post-excerpt {
+            margin-top: 5px;
+            background-color: var(--dark-green);
+        }
+    }
+}
+
+.date-line {
+    margin-bottom: 40px;
+    font-size: 0.8em;
+}
+.footnotes-divider {
+    margin-top: 15px;
 }

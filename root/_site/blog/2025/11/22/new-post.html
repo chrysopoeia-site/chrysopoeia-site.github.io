@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chrysopoeia</title>
+    <title>New Post</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -59,7 +59,7 @@
  -->
 </header>
 
-            <div class="about-body">
+            <div class="blog-body">
     <aside class="aside left-aside">
         <div class="aside-item">
     <fieldset>
@@ -99,13 +99,41 @@
     </fieldset>
 </div>
 
+        <div class="aside-item">
+    <fieldset>
+        <legend>
+            site music
+        </legend>
+        <audio id="site-theme-player" autoplay src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Double_Drift_(MacLeod%2C_Kevin)_(ISRC_USUAN1100254).oga"></audio>
+        <div class="music-controls">
+            <a class="music-toggle" onclick="document.getElementById('site-theme-player').play()">Play</a>
+            <a class="music-toggle" onclick="document.getElementById('site-theme-player').pause()">Pause</a>
+        </div>
+        <p class="currently-playing"><i>Double Drift</i> by Kevin MacLeod</p>
+        <p class="currently-playing">I'll put my own music on here a little later.</p>
+    </fieldset>
+</div>
+
     </aside>
     <main>
-        <div class="about-main">
-            <h1>About</h1>
-            <p>Chrysopoeia is the alchemical process of transmuting lesser metals into gold. It is also a nice word. My reason for choosing it is more for the latter, but the concept is still cool.</p>
-            <h2>Technical Stuff</h2>
-            <p>This site was hand-coded and for better or worse, it shows. I used plain HTML, CSS, and <a href="https://jekyllrb.com/" target="_blank">Jekyll </a> for some <a href="https://en.wikipedia.org/wiki/Static_site_generator" target="_blank">SSG action</a>. Javascript is only used for playing music.</p>
+        <div class="blog-main">
+            <a onclick="history.back()" style="cursor: pointer;"><< back</a>
+            <article>
+                <h1>New Post</h1>
+                <p class="date-line">2025-11-22</p>
+                <p>Here’s the garbage<sup id="fnref:garbage"><a href="#fn:garbage" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> that goes into this post.</p>
+
+<hr class="footnotes-divider" />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:garbage">
+      <p>It’s not really garbage. <a href="#fnref:garbage" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+            </article>
         </div>
     </main>
 </div>

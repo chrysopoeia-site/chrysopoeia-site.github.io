@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Chrysopoeia</title>
-        <link rel="stylesheet" href="assets/css/styles.css">
-    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chrysopoia > Blog</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
     <body>
         <div class="root-ctr">
             <header>
     <div class="header-spacer"></div>
     <a href="/" id="site-logo">
-        <img src="assets/imgs/logo_ichigaya-mincho.png" alt="chrysopoeia">
+        <div class="logo-ctr">
+            <p class="moon">☽</p>
+            <p class="stars">₊⁺⋆</p>
+            <p class="logo-lines">═</p>
+            <h1>Chrysopoeia</h1>
+            <p class="logo-lines">═</p>
+            <p class="stars">⋆⁺₊</p>
+            <p class="moon">☾</p>
+        </div>
+        <!-- <img src="assets/imgs/logo_ichigaya-mincho.png" alt="chrysopoeia"> -->
     </a>
     <!-- <nav>
     <ul class="nav-ctr">
@@ -46,7 +60,7 @@
 </header>
 
             <div class="blog-body">
-    <div class="aside left-aside">
+    <aside class="aside left-aside">
         <div class="aside-item">
     <fieldset>
         <legend>
@@ -85,12 +99,89 @@
     </fieldset>
 </div>
 
-    </div>
-    <div class="main">
-        <div class="blog-main">
-            on until i eventually fill the width will my container eventually expand?
+        <div class="aside-item">
+    <fieldset>
+        <legend>
+            site music
+        </legend>
+        <audio id="site-theme-player" autoplay src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Double_Drift_(MacLeod%2C_Kevin)_(ISRC_USUAN1100254).oga"></audio>
+        <div class="music-controls">
+            <a class="music-toggle" onclick="document.getElementById('site-theme-player').play()">Play</a>
+            <a class="music-toggle" onclick="document.getElementById('site-theme-player').pause()">Pause</a>
         </div>
-    </div>
+        <p class="currently-playing"><i>Double Drift</i> by Kevin MacLeod</p>
+        <p class="currently-playing">I'll put my own music on here a little later.</p>
+    </fieldset>
+</div>
+
+    </aside>
+    <main>
+        <div class="blog-main">
+            <h1>Blog</h1>
+            <div class="posts-ctr">
+                <ul>
+                    
+                    <li><a href="/blog/2025/11/22/new-post.html">2025-11-22 - New Post</a>
+                        
+                        <div class="post-excerpt">This is my latest post which was only created for the purposes of demonstration.</div>
+                        
+                    </li>
+                    
+                    <li><a href="/blog/2025/11/22/incipit.html">2025-11-22 - Incipit</a>
+                        
+                        <div class="post-excerpt">On starting a blog :)</div>
+                        
+                    </li>
+                    
+                </ul>
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/writing/nonfiction/2025/11/22/testing.html">NonFiction Test</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/updates/2025/11/22/colors-again.html">Colors Again</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/blog/2025/11/22/new-post.html">New Post</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/blog/2025/11/22/incipit.html">Incipit</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/updates/2025/11/19/colors.html">Colors</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/updates/2025/11/19/tweets.html">Tweets</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/updates/2025/11/18/blog.html">Blog</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/tweets/2025/11/17/stardew-valley.html">Stardew Valley</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/tweets/2025/11/17/passion.html">effortful passion</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/tweets/2025/11/17/lorem.html">Lorem</a> -->
+                <!-- </li> -->
+                <!--  -->
+                <!-- <li> -->
+                <!--     <a href="/tweets/2025/11/17/jflkdj.html">Jflkdj</a> -->
+                <!-- </li> -->
+                <!--  -->
+            </div>
+        </div>
+    </main>
 </div>
 
             <footer>
