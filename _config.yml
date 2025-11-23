@@ -1,4 +1,7 @@
 title: Chrysopoeia
+root: /
+baseurl: /
+url: http://chrysopoeia-site.github.io
 collections:
   blog:
     output: true
