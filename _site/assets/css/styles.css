@@ -50,6 +50,25 @@
     --panel-padding: 10px;
 }
 
+
+::selection {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.white-bottom-light {
+    background: linear-gradient(to top, var(--off-white) 0%, transparent 40%);
+}
+.red-bottom-light {
+    background: linear-gradient(to top, #ab4e1d 0%, transparent 70%);
+}
+.red {
+    color: var(--red);
+}
+.yellow {
+    color: var(--yellow);
+}
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -95,8 +114,8 @@ audio {
 }
 .inline-img {
     display: inline-block;
-    margin: 0px 3px 0px 3px;
-    height: var(--base-font-size);
+    /* margin: 0px 3px 0px 3px; */
+    max-height: var(--base-font-size);
 }
 a, a:visited {
     background: linear-gradient(to top, var(--red) 50%, transparent 50%);
@@ -256,7 +275,20 @@ header {
     .update-date {color: var(--yellow);}
     .update {margin-bottom: 20px;}
 }
-
+.site-progress-ctr {
+    cursor: default;
+    ul {
+        max-height: 250px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        li {
+            text-align: left;
+            background-color: var(--dark-green);
+            margin-bottom: 15px;
+            color: var(--yellow);
+        }
+    }
+}
 main {
     /* box-shadow: 10px 10px var(--off-white); */
     box-shadow: 10px 10px 2px var(--off-white);
@@ -266,6 +298,9 @@ main {
     margin: 5px 15px 5px 15px;
     background-color: var(--green);
     >* {margin-bottom: 15px;}
+    p {
+        margin-bottom: 15px;
+    }
     ul {
         margin-left: 50px;
         list-style-type: disc;
@@ -312,6 +347,14 @@ main h2 {
     }
 }
 
+.gallery {
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 15px;
+    padding: 10px;
+}
 .date-line {
     margin-bottom: 40px;
     font-size: 0.8em;

@@ -1,6 +1,12 @@
 ---
 title: Chrysopoeia
 layout: default
+
+url_gifcities: "https://gifcities.org/"
+url_jekyll: "https://jekyllrb.com/"
+url_wiki_ssg: "https://en.wikipedia.org/wiki/Static_site_generator"
+url_emotiweb: "https://testing.duckwithsunglasses.com/emotiweb/"
+url_vintage_fonts: "https://int10h.org/oldschool-pc-fonts/fontlist/"
 ---
 
 <div class="about-body">
@@ -12,7 +18,15 @@ layout: default
             <h1>About</h1>
             <p>Chrysopoeia is the alchemical process of transmuting lesser metals into gold. It is also a nice word. My reason for choosing it is more for the latter, but the concept is still cool.</p>
             <h2>Technical Stuff</h2>
-            <p>This site was hand-coded and for better or worse, it shows. I used plain HTML, CSS, and <a href="https://jekyllrb.com/" target="_blank">Jekyll </a> for some <a href="https://en.wikipedia.org/wiki/Static_site_generator" target="_blank">SSG action</a>. Javascript is only used for playing music.</p>
+            <p>This site was hand-coded and for better or worse, it shows. I used plain HTML, CSS, and Jekyll for <a href="{{page.url_wiki_ssg}}" target="_blank">Static Site Generation</a>. Javascript is only used for playing music.</p>
+            <p>The only font used on this site (so far) is <strong>Mx437_IBM_PS-55_re</strong> from the Ultimate Oldschool PC Font Pack (see below).</p>
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="{{page.url_vintage_fonts}}" target="_blank">Ultimate Oldschool PC Font Pack</a> - Grab some vintage computer fonts.</li>
+                <li><a href="{{page.url_jekyll}}" target="_blank">Jekyll docs</a> - Ever wanted to make reusable components but think frameworks like React fucking suck?</li>
+                <li><a href="{{page.url_gifcities}}" target="_blank">GifCities</a> - a search engine for gifs used on old GeoCities websites.</li>
+                <li><a href="{{page.url_emotiweb}}">EmotiWeb </a> - A site for making custom emotiguy pngs.</li>
+            </ul>
         </div>
     </main>
 </div>
