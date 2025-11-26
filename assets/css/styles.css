@@ -34,7 +34,11 @@
     --dark-green: #313c0f;
     --black: #191713;
     --red: #6f3939;
+    --purple: #5c3f79;
     --yellow: #ddb931;
+    --dark-yellow: #6c6b10;
+    --blue: #2a6ca6;
+    --teal: #28886d;
     --ochre1: #877539;
     --ochre2: #8B7948;
     --green1: #978f43;
@@ -248,7 +252,7 @@ header {
     display: flex;
     flex-direction: row;
     min-height: 300px;
-    width: auto;
+    /* width: auto; */
 }
 .aside {
     width: 250px;
@@ -361,4 +365,113 @@ main h2 {
 }
 .footnotes-divider {
     margin-top: 15px;
+}
+
+/*  */
+/* SHELVES */
+/*  */
+
+.media-ctr {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-green);
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    max-height: 900px;
+    overflow-x: scroll;
+    scrollbar-width: thin !important;
+    >* {
+        margin: 10px;
+    }
+    .media-card {
+        border: 4px double var(--black);
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        /* use flex grow shrink basis */
+        max-width: 250px;
+        flex: 0 1 25%;
+        padding: 5px;
+        a {
+            color: var(--off-white);
+            /* text-decoration: underline; */
+            background: transparent;
+            margin-bottom: 5px;
+        }
+        .media-card-top {
+            display: flex;
+            justify-content: space-between;
+            > * {
+                font-size: 0.8em;
+            }
+        }
+        .media-card-middle {
+            .artist {
+                font-size: 0.9em;
+                background-color: var(--black);
+                display: inline;
+                padding: 2px 5px 2px 5px;
+            }
+            .release-date {
+                /* color: var(--yellow); */
+                margin-top: 5px;
+                font-size: 0.9em;
+            }
+            .media-post-content {
+                padding: 5px;
+                max-height: 300px;
+                overflow-y: scroll;
+                font-size: 0.9em;
+                >* {
+                    text-align: left;
+                }
+            }
+        }
+        .media-card-bottom {
+            padding: 10px;
+            >* {
+                background: linear-gradient(to top, var(--red) 50%, transparent 50%);
+                display: inline-block;
+                height: 1em;
+                color: var(--yellow);
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+    .show {
+        background-color: var(--purple);
+        .media-post-content {
+            background-color: #3b254a;
+        }
+    }
+    .music {
+        background-color: var(--blue);
+        .media-post-content {
+            background-color: #2c4a64;
+        }
+        .post-link {
+            align-self: start;
+        }
+    }
+    .book {
+        background-color: var(--dark-yellow);
+        .media-post-content {
+            background-color: #4b4c25;
+        }
+    }
+    .movie {
+        background-color: var(--red);
+        .media-post-content {
+            background-color: #4c2527;
+        }
+    }
+    .game {
+        background-color: var(--teal);
+        .media-post-content {
+            background-color: #16624d;
+        }
+    }
 }

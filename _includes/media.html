@@ -1,0 +1,76 @@
+<div class="media-ctr">
+    {% for post in site.categories.consumption%}
+    <div class="media-card {{post.type}}">
+        <div class="media-card-top">
+            <p class="type">
+            {% if post.subtype %}
+                {{post.subtype}}
+            {% else %}
+                {{post.type}}
+            {% endif %}
+            </p>
+            <p class="media-post-date">
+            {{post.date | date: "%Y-%m-%d"}}
+            </p>
+        </div>
+        <div class="media-card-middle">
+            <h3>
+                <a href="{{post.url}}">
+                    {{post.title}}
+                </a>
+            </h3>
+            <p class="artist">
+                {{post.artist}}
+            </p>
+            <p class="release-date">
+            {{post.release-date}}
+            <!-- {% if post.type == "book" %} -->
+            <!--     Published: {{post.release-date}} -->
+            <!-- {% elsif post.type == "show" %} -->
+            <!--     Aired: {{post.release-date}} -->
+            <!-- {% else %} -->
+            <!--     Released: {{post.release-date}} -->
+            <!-- {% endif %} -->
+            </p>
+            <div class="rating">
+                {% case post.rating %}
+                {% when "0" %}
+                    ☆☆☆☆☆
+                {% when "0.5" %}
+                    ☆☆☆☆☆ ½
+                {% when "1" %}
+                    ★☆☆☆☆
+                {% when "1.5" %}
+                    ★☆☆☆☆ ½
+                {% when "2" %}
+                    ★★☆☆☆
+                {% when "2.5" %}
+                    ★★☆☆☆ ½
+                {% when "3" %}
+                    ★★★☆☆
+                {% when "3.5" %}
+                    ★★★☆☆ ½
+                {% when "4" %}
+                    ★★★★☆
+                {% when "4.5" %}
+                    ★★★★☆ ½
+                {% when "5" %}
+                    ★★★★★
+                {% else %}
+                    {{post.rating}}
+                {%endcase%}
+            </div>
+            <div class="media-post-content">
+                {{post.content}}
+            </div>
+        </div>
+        <div class="media-card-bottom">
+            {%if post.link %}
+            <a class="post-link" href="{{post.link}}" target="_blank">
+                Support the Artist
+            </a>
+            {%endif%}
+        </div>
+    </div>
+    {% endfor %}
+</div>
